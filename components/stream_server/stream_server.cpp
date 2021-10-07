@@ -61,7 +61,7 @@ void StreamServerComponent::cleanup() {
     
     if ((++i % 1000) == 0)
       {
-        for (auto it = this->clients_.begin(), it != this->clients_.end(); it++)
+        for (auto it = this->clients_.begin(); it != this->clients_.end(); it++)
             ESP_LOGD(TAG, "Client %s connected", (*it)->identifier.c_str());
 
       }
